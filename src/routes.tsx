@@ -3,13 +3,12 @@ import {
     Switch,
     Route,
   } from 'react-router-dom';
-
-  import { CreateSong } from './pages/create-song/CreateSong';
+import { Home } from './pages/home/Home';
 
   export const Routes: FC = () => (
       <Switch>
           <Route path="/">
-              <CreateSong />
+              <Home />
           </Route>
       </Switch>
   )
