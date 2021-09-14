@@ -1,6 +1,7 @@
 import { ApolloProvider } from '@apollo/client';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
 import { client } from '../../apollo/client';
 
 import { CreateSong } from './CreateSong';
@@ -9,11 +10,11 @@ describe('<CreateSong />', () => {
   it('should render form with title and user should be able to enter title input', async () => {
     render(
       <ApolloProvider client={client}>
-        <CreateSong />
+        <BrowserRouter><CreateSong /></BrowserRouter>
       </ApolloProvider>
     );
    
-    const newSongtitle = "first song";
+    const newSongtitle = "mocked song";
     const pageTitle = screen.getByText('Create Song');
     const submitButton = screen.getByRole('button', {
       name: 'Submit',

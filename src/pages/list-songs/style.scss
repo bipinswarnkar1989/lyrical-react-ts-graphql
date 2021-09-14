@@ -1,0 +1,25 @@
+$color-grey: #D1D7DB;
+
+.song {
+  list-style: none;
+  margin: 0 auto;
+  width: 60%;
+  border: 1px solid $color-grey;
+  border-radius: 0.24rem;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem .5rem;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $color-grey;
+  }
+}
+
+.delete-icon {
+    color: #CC0200;
+    cursor: pointer;
+}
